@@ -15,7 +15,6 @@
           "options": {
             "outputPath": "docs",
             "baseHref": "/RollIniciativeBasicCode/",
-            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],

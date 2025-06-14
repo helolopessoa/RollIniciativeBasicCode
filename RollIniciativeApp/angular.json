@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RollIniciativeBasicCode": {
+    "RollIniciativeApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,10 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "docs",
-            "baseHref": "/RollIniciativeBasicCode/",
-            "polyfills": [
-              "zone.js"
-            ],
+            "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -57,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "RollIniciativeBasicCode:build:production"
+              "buildTarget": "RollIniciativeApp:build:production"
             },
             "development": {
-              "buildTarget": "RollIniciativeBasicCode:build:development"
+              "buildTarget": "RollIniciativeApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,10 +68,6 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {

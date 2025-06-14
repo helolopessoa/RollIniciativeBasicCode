@@ -125,16 +125,17 @@ def combate():
             if(novosPlayer == 1):
                 qntd = int(input('Quantos entraram no combate? '))
                 players = adicionaPlayers(qntd, players)
-            if(novosPlayer == 0):
+            elif(novosPlayer == 0):
                 qntd = int(input('Quantos morreram/saíram do combate? '))
                 players = removePlayers(qntd, players)
-            else:
+            elif(novosPlayer == 2):
                 qntd = int(input('Quantos entraram no combate? '))
                 players = adicionaPlayers(qntd, players)
                 qntd = int(input('Quantos morreram/saíram do combate? '))
                 players = removePlayers(qntd, players)
             print()
             lutando = 1
+            novosPlayer = -1
 
 
 combate()
